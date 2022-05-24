@@ -36,5 +36,66 @@ console.log(a16, typeof a16);
 console.log(a17, typeof a17);
 console.log(a18, typeof a18);
 
+//3
+let height = 23,
+    width = 10,
+    SPryam = height * width;
+console.log('Площадь прямоугольника = ', SPryam, 'см');
+
+//4
+
+let heightCilinder = 10,
+    VCilindra = Math.PI * Math.pow(a7/2, 2) * heightCilinder;
+console.log('Объем цилиндра = ', VCilindra, 'см');
+
+//5
+
+let radius = 5,
+    SKruga = Math.PI * Math.pow(radius, 2);
+console.log('Площадь круга = ', SKruga, 'см');
+
+//6
+let hTrap = 10,
+    aTrap = 7,
+    bTrap = 5,
+    STrap = (aTrap + bTrap) / 2 * hTrap;
+console.log('Площадь трапеции = ', STrap, 'см');
+
+//7
+let Summ = 2000000,
+    percent = 10;
+    years = 5;
+    Pereplata = Summ /100 * percent * years;
+console.log('Пepeплата по кредиту = ', Pereplata)
+
+//8
+let a = 8,
+    b = 3,
+    x;
+    x = (16-a) / 2 + b;
+    console.log('x= ', x);
+    x =   x = (15 * b - a) / (6 - b);
+    console.log('x= ', x)
+    x = 23780 / (3 + a + b);
+    console.log('x= ', x);
+    console.log('');
+
+//9
+    console.log('Бывало, спит у ног собака,');
+    console.log('костер занявшийся гудит,');
+    console.log('и женщина из полумрака');
+    console.log('глазами зыбкими глядит.');
+    console.log('');
+    console.log('Потом под пихтою приляжет');
+    console.log('на куртку рыжую мою');
+    console.log('и мне, задумчивая, скажет:');
+    console.log('');
+    console.log('"А ну-ка, спой!.."- и я пою.');
+    console.log('');
+
+    
+
+
+
 
 
