@@ -78,20 +78,10 @@ let a = 8,
     console.log('x= ', x)
     x = 23780 / (3 + a + b);
     console.log('x= ', x);
-    console.log('');
+    
 
 //9
-    console.log('Бывало, спит у ног собака,');
-    console.log('костер занявшийся гудит,');
-    console.log('и женщина из полумрака');
-    console.log('глазами зыбкими глядит.');
-    console.log('');
-    console.log('Потом под пихтою приляжет');
-    console.log('на куртку рыжую мою');
-    console.log('и мне, задумчивая, скажет:');
-    console.log('');
-    console.log('"А ну-ка, спой!.."- и я пою.');
-    console.log('');
+   
 
     
 
