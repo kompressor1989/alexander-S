@@ -123,9 +123,109 @@ else {console.log('Неправильное число')
 недели, вывести сообщение «Меньше года», «Меньше месяца» и «Меньше недели»,
 соответственно.*/
 
+let days = 200;
+    month = days / 31,
+    years = days / 365,
+    weeks = days / 7,
+    hours = days * 24,
+    minutes = days * 1440,
+    seconds = days * 86440;
+if (years > 1) {
+    console.log(`Годов: ${years}`);
+}
+else {
+    console.log('Меньше года');
+};
+
+if (month > 1) {
+    console.log(`Месяцев: ${month}`);
+}
+else {
+    console.log('Меньше месяца');
+};
 
 
+if (weeks > 1) {
+    console.log(`Недель: ${weeks}`);
+}
+else {
+    console.log('Меньше недели');
+};
 
+console.log(`Часов: ${hours}, Минут: ${minutes}, Секунд: ${seconds}`);
+
+
+//10
+/* Напишите скрипт, который по введенному дню (исп. значение переменной из 8
+задания) в году (например, 256) определит месяц (от 1 до 12) и пору года (зима, лето и
+т.д.). Скрипт определение поры года написать через switch.*/
+let d = 200;
+
+switch (true) {
+    case d > 1  && d <= 31:
+        console.log('Месяц январь');
+        break;
+    case d > 31 && d <= 59:
+        console.log('Месяц февраль');
+        break;
+
+    case d > 59 && d <= 90:
+        console.log('Месяц март');
+        break;
+
+    case d > 90 && d <= 120:
+        console.log('Месяц апрель');
+        break;
+
+    case d > 120 && d <= 151:
+        console.log('Месяц май');
+        break;
+    case d > 151 && d <= 181:
+        console.log('Месяц июнь');
+        break;
+
+    case d > 181 && d <= 212:
+        console.log('Месяц июль');
+        break;
+
+    case d > 212 && d <= 243:
+        console.log('Месяц август');
+        break;
+
+    case d > 243 && d <= 273:
+        console.log('Месяц сентябрь');
+        break;
+
+    case d > 273 && d <= 304:
+        console.log('Месяц октябрь');
+        break;
+
+    case d > 304 && d <= 334:
+        console.log('Месяц ноябрь');
+        break;
+
+    case d > 334 && d <= 365:
+        console.log('Месяц декабрь');
+        break;
+    default:
+        console.log('Неправильное число');
+};
+
+switch (true) {
+    case d >= 1 && d <=59 && d > 334 && d <= 365:
+        console.log(`Это зима`);
+        break;
+    case d > 59 && d <= 151:
+        console.log('Это весна');
+        break;
+    case d > 151 && d <= 243:
+        console.log('Это лето');
+        break;
+
+    case d > 243 && d <= 334:
+    console.log('Это осень');
+    break;
+}
 
 
 
