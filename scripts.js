@@ -49,13 +49,27 @@ console.log(summ);
 let sum = 0;
 for (i = 1; i <= 5; i++) {
     sum += i;
-    console.log(`Суммa = ${sum}`);
+    console.log(`Суммa ${i} = ${sum}`);
 }
 
 
 
 //5
 /*Выведите чётные числа от 8 до 56. Решить задание через while и for.*/
+let n3 = 8;
+while (n3 <= 56) {
+    if (n3 % 2 == 0) {
+        console.log(n3);
+    }
+    n3++;
+}
+
+for (n4 = 8; n4 <= 56; n4++) {
+    if (n4 % 2 == 0){
+       console.log(n4); 
+    }
+    
+}
 
 
 //6
@@ -71,8 +85,13 @@ for (i = 1; i <= 5; i++) {
 3*4=12
 ...
 Для решения задачи используйте вложенные циклы..*/
-
-
+let math = 0;
+for (n5 = 2; n5 <= 10; n5++) {
+    for (g = 1; g <= n5; g++){
+        math = n5 * g;
+        console.log(`${n5} * ${g} = ${math}`)
+    }
+}
 
 
 //7
