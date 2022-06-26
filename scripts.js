@@ -1,226 +1,5 @@
 
-/*
-//Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for выведите все эти элементы на экран.     
-  let arr = [1, 2, 3, 4, 5];
-  for (let i = 0; i < arr.length; i++) console.log(arr[i]);       
-        
 
-  /*Дан массив с числами [-2, -1, -3, 15, 0, -4, 2, -5, 9, -15, 0, 4, 5, -6, 10, 7]. Числа могут
-быть положительными и отрицательными. Выведите на экран только отрицательные
-числа, которые больше -10, но меньше -3.*/
-/*let arR = [-2, -1, -3, 15, 0, -4, 2, -5, 9, -15, 0, 4, 5, -6, 10, 7];
-for (let i = 0; i < arR.length; i++) {
-    if (arR[i] < -3 && arR[i] > -10) {
-        console.log(arR[i]);
-    }
-    else continue;
-}
-
-/*Создайте новый массив и заполните его значениями от 23 до 57, используя цикл for и
-while. Выведите оба массива. С помощью цикла for найдите сумму элементов этого
-массива. Запишите ее в переменную result и выведите.*/
-/* let arr1 = [];
- let result = 0;
- let i = 23;
- for(let i = 23; i <= 57; i++) {
-     arr1[i] = i;
-    console.log(arr1[i]);
- }
-
- 
-
- while(i <= 57) {
-     arr1[i] = i;
-     console.log(arr1[i]);
-     i++;
- };
-
- for(let i = 23; i <= 57; i++) {
-   result += +arr1[i];
- }
-console.log(`Результат сложения элементов массива: ${result}`);
-
-//Дан массив числами (строчного типа), например: [‘10’, ‘20’, ‘30’, ‘50’, ‘235’, ‘3000’].
-//Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или
-//5.
-
-let arr2 =  ["10", "20", "30", "50", "235", "3000"];
-for (let i = 0; i < arr2.length; i++) {
-    let num = String(arr2[i]);
-    let char = num[0];
-   
-    if (char == 1 || char == 2 || char == 5) {
-     console.log(num);
-    }
-}
-
-//Составьте массив дней недели (ПН, ВТ, СР и т.д.). С помощью цикла for выведите все
-//дни недели, а выходные дни выведите жирным.
-
-let week = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
-for(let i = 0; i < week.length; i++) {
-    //if (i > 4)
-    if (week[i] == "Суббота" || week[i] == "Воскресенье") {
-        document.write('<b>' + week[i] + '</b>' + ' ');
-    }
-
-    else console.log(week[i]);
-}
-
-//Создайте массив с произвольными данными. Добавьте в конец массива любой элемент,
-//и получите последний элемент массива, используя свойство length.
-let arr3 =  ["10", "20", "30", "50", "235", "3000"];
-arr3.push("1989");
-
-console.log(arr3[arr3.length - 1]);
-
-//Запросите у пользователя по очереди числовые значения при помощи prompt и
-//сохраните их в массив. Собирайте числа до тез пор пока пользователь не введет пустое
-//значение. Выведите получившийся массив на экран. Выполните сортировку чисел
-//массива, и выведите его на экран.
-let arr4 = [];
-for(let i = 0; i < 20; i++) {
-    arr4[i] = prompt('Введите число:');
-    if (arr4[i] == ''){
-        arr4.pop();
-        break;  
-    }
-   
-}
-
-console.log(arr4)
-
-//Переверните массив [12, false, ‘Текст’, 4, 2, -5, 0] (выведите в обратном порядке),
-//используя цикл while и метод reverse.
-
-let arr5 = [12, false, "Текст", 4, 2, -5, 0];
-//arr5.reverse();
-let k = 0;
-while(k < arr5.length){
-    arr5.reverse();
-    k++
-}
-
-console.log(arr5);
-
-//Напишите скрипт, считающий количество нулевых (пустых) элементов в заданном
-//целочисленном массиве [5, 9, 21, , , 9, 78, , , , 6].
-
-let arr6 = [5, 9, 21, , , 9, 78, , , , 6];
-let count = 0;
-for (let i = 0; i < arr6.length; i++) {
-    if( arr6[i] ==  undefined)
-    count++;
-}
-
-
-console.log(count)
-
-/*Найдите сумму элементов массива между двумя нулями (первым и последним нулями
-    в массиве). Если двух нулей нет в массиве, то выведите ноль. В массиве может быть
-    более 2х нулей. Пример массива: [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2] или
-    [1,8,0,13,76,8,7,0,22,0,2,3,2].*/
-
-   /* let arr7 = [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2],
-        arr8 = [1,8,0,13,76,8,7,0,22,0,2,3,2],
-        summA = 0;
-    for (let i = 0; i < arr7.length; i++) {
-        if ( arr7[i] == 0) {
-            for( let j = i + 1; j < arr7.length; j++) {
-                summA += arr7[j];
-                
-                if( arr7[j] == 0) {
-                    console.log(`Сумма между двух нулей в массиве: ${summA}`);
-                    break;
-                }
-                else if ( arr7[j] != 0) {
-                    console.log("0");
-                    
-                }
-            }
-        break;
-        }
-
-    }
-
-
-    //11 не решил
-
-    const a = [1,2,3,4,5,6];
-    a.length = 2;
-    console.log(a)
-*/
-
-/*let arr = [1, -2, 3, 4, 5, 0, -10];
-let sum = 0;
-for(let i = 0; i < arr.length; i++) {
-    sum += +arr[i];
-}
-console.log (sum);*/
-
-/*Найти номер и значение первого найденного отрицательного элемента массива.
-
-Написать #общий
-*/
-
-/*let arr = [1, -2, 3, 4, 5, 0, -10];
-
-for(let i = 0; i < arr.length; i++) {
-    if (arr[i] < 0) {
-        console.log(`Номер: ${i} значение: ${arr[i]}`);
-        break;
-    }
-}*/
-
-//Найдите максимальный и минимальный элементы массива. Выведите эти элементы и их сумму.
-/*let arr = [1, -2, 3, 4, 5, 0, -10];
-let summa = 0;
-let max;
-let min;
-for(let i = 0; i < arr.length; i++) {
- if (arr[i] > arr[i+1])  max = arr[i]
- else min = arr[i];    
- 
-}
-
-console.log(min + max);*/
-//Создайте произвольный массив и выведите его перевернутую версию, например: [0, ‘N’, 98, ‘Text’, 3, 5] => [5, 3, ‘Text’, 98, ‘N’, 0]
-/*let arr = [0, 'N', 98, 'Text', 3, 5];
-for(let i = 0; i < arr.length; i++) {
-    arr.reverse();
-}
-
-console.log(arr);*/
-
-
-//Дан массив, содержащий положительные и отрицательные числа. Заменить все элементы массива на противоположные по знаку. Например, задан массив [1, -5, 0, 3, -4]. После //преобразования должно получиться [-1, 5, 0, -3, 4].
-/*let arr = [1, -5, 0, 3, -4];
-for(let i = 0; i < arr.length; i++){
-    arr[i] =  - arr[i];
-    }
-console.log(arr)*/
-
-// местами максимальный и минимальных элементы в массиве.
-/*let arr = [1, -2, 3, 4, 5, 0, -10];
-
-let max;
-let min;
-for(let i = 0; i < arr.length; i++) {
- if (arr[i] > arr[i+1])  max = arr[i]
- else min = arr[i];    
- 
-}
-arr[arr.indexOf(min)] = max;
-arr[arr.indexOf(max)] = min;
-console.log(arr);*/
-//Дан массив целых чисел. Проверить, есть ли в нем одинаковые элементы. Вывести в консоль: “Есть повторки!”, “Нет повторок”
-/*let arr = [1, -2, 5, 4, 5, 0, -10];
-for(let i = 0; i < arr.length; i++) {
-    if (arr[i] == arr[i+1])
-    console.log('есть повтор');
-    else 
-    console.log('нет повтора');
-}*/
 
 //1. Сделайте функцию, которая отнимает от первого числа второе и делит на
 //третье. Числа передаются параметром.
@@ -363,7 +142,7 @@ function antiTriangle (h) {
             line = '';     
         }
     }
- antiTriangle(h);
+ //antiTriangle(h);
  
  
 
@@ -427,3 +206,203 @@ function eleven() {
     let group = prompt('Ваш номер группы');
 
 }*/
+function repeatStr (n, s) {
+    let myString = '';
+    s = String(s);
+    if( n == 0) return console.log('');
+    for(i = 1; i <= n; i++) {
+        myString += s;
+    }
+   
+          
+    return console.log(myString);
+  }
+ 
+  function fakeBin(x){
+  let str = '';
+  x = String(x);
+    for(i = 0; i < x.length; i++) {
+      if (x[i] == '5') {
+         x[i] = '1';
+        str += x[i];
+      }
+       
+      else {
+        x[i] = '0';
+        str += x[i];
+    }
+    return str;
+  
+  }
+}
+  
+
+function powersOfTwo(n){
+        let array = [];
+        for (i = 0; i <= n; i++) {
+          
+          array.push(2 ** i)
+      
+        }
+       
+    console.log(array)
+  }
+  
+  //Напишите функцию, которая переворачивает число, например: 5675 => 5765.
+  function reverseNum(str) {
+
+    return str.split("").reverse().join("");
+  
+  }
+  
+ //console.log(reverseNum("5670"))
+
+ function checkPalindrom (str) {
+    return str == str.split('').reverse().join('');
+  }
+  //console.log(checkPalindrom('Лидер бредил'))
+  //Напишите функцию alphabetOrder(str), которая возвращает переданную строку с буквами в алфавитном порядке. Пример строки: 'alphabetical'. Ожидаемый результат: /////'aaabcehillpt'. Предположим, что символы пунктуации и цифры не включены в переданную строку.
+
+
+  function alphabet(str) {
+  
+    return str.split('').sort().join('');
+      
+    }
+
+    //console.log(alphabet("привет медвед"))
+
+    //Напишите функцию, которая возвращает элементы массива, которые больше указанного числа. Нельзя использовать циклы for или while.
+    function big (value) {
+        let arr = [1, 3, 8, 10];
+        return arr.filter(value);
+    }
+    //console.log(big(4));
+    //Перепишите код, заменив цикл for на метод map:
+
+let arr = ["Есть", "жизнь", "на", "Марсе"];
+
+const arrLength = [];
+var nameLengths = arr.map(function(arr) {
+    return arrLength.push(arr.length);
+  });
+ 
+
+
+//console.log(arrLength); // 4,5,2,5
+
+//1. Дана строка 'aaa@bbb@ccc'. Замените все @ на ! с помощью глобального
+//поиска и замены.
+let stroka = 'aaa@bbb@ccc';
+console.log(stroka.replace(/@/g, '!'));
+
+//2. В переменной date лежит дата в формате 2025-12-31. Преобразуйте эту
+//дату в формат 31/12/2025.
+console.log('2025-12-31'.replace(/-/g, '/'));
+
+//3. Дана строка «Я учу javascript!». Вырежете из нее слово «учу» и слово
+//«javascript» тремя разными способами (через substr, substring, slice).
+let stroka3 = 'Я учу javascript!';
+console.log(stroka3.slice(0,2));
+console.log(stroka3.substring(0,2));
+console.log(stroka3.substr(0,1));
+
+// 4. Дан массив с элементами 4, 2, 5, 19, 13, 0, 10. Найдите квадратный корень
+//из суммы кубов его элементов. Для решения воспользуйтесь циклом for.
+let arr4 = [4, 2, 5, 19, 13, 0, 10];
+let cube = 0;
+for (let i = 0; i < arr4.length; i++) {
+    cube += Math.pow(arr4[i], 3);
+} 
+console.log(Math.sqrt(cube));
+
+//5. Даны переменные a и b. Отнимите от a переменную b и результат
+//присвойте переменной c. Сделайте так, чтобы в любом случае в переменную
+//c записалось положительное значение. Проверьте работу скрипта при a и b,
+//равных соответственно 3 и 5, 6 и 1.
+function abc (a, b) {
+   return console.log(Math.abs(a - b));
+}
+abc(3, 5);
+abc(6, 1);
+
+//6. Выведите на экран текущую дату-время в формате 12:59:59 31.12.2014.
+//Для решения этой задачи напишите функцию, которая будет добавлять 0
+//перед днями и месяцами, которые состоят из одной цифры (из 1.9.2014
+//сделает 01.09.2014).
+let DateNow = new Date();
+console.log(DateNow.toLocaleString('ru'));
+function time(DateNow){
+let month = DateNow.getMonth() + 1;
+let day = DateNow.getDate();
+let hours = DateNow.getHours();
+let minutes = DateNow.getMinutes();
+let seconds = DateNow.getSeconds();
+let year = DateNow.getFullYear();
+if(month < 10) {
+    month = "0" + month;
+}
+if (day <10) {
+    day = "0" + day;
+}
+return console.log(day + '.' + month + '.' + year + ', ' + hours + ':' + minutes + ':' + seconds);
+}
+time(DateNow);
+
+//7. Дана строка 'aa aba abba abbba abca abea'. Напишите регулярку, которая
+//найдет строки aba, abba, abbba по шаблону: буква 'a', буква 'b' любое
+//количество раз, буква 'a'.
+let str7 = 'aa aba abba abbba abca abea';
+let regexp = /ab{1,}a/gi;
+//let regexp = /ab+a/gi;
+console.log(str7.match(regexp));
+
+//8. Напишите ф-цию строгой проверки ввода номер телефона в
+//международном формате (<код страны> <код города или сети> <номер
+//телефона>). Функция должна возвращать true или false. Используйте
+//регулярные выражения
+
+//let phoneNumber = prompt("Введите номер телефона");
+function phoneFilter(phoneNumber) {
+    let regexp = /^\+375[ \d(]?(29|33|25|44|17)?[ \d)][1-9][0-9]{2}[ -]?[0-9]{2}[ -]?[0-9]{2}$/gm;
+    return console.log(regexp.test(phoneNumber));
+}
+//phoneFilter(phoneNumber);
+
+/*9. Напишите ф-цию строгой проверки адреса эл. почты с учетом следующих
+условия:
+- весь адрес не должен содержать русские буквы и спецсимволы, кроме
+одной «собачки», знака подчеркивания, дефиса и точки;
+- имя эл. почты (до знака @) должно быть длиной более 2 символов, причем
+имя может содержать только буквы, цифры, но не быть первыми и
+единственными в имени;
+- после последней точки и после @, домен верхнего уровня (ru, by, com и т.п.)
+не может быть длиной менее 2 и более 11 символов.
+
+Курс «JS».
+
+Функция должна возвращать true или false. Используйте регулярные
+выражения.*/
+
+//let email = prompt("Введите свой email");
+function emailFilter(email) {
+    let regexp = /^[0-9a-z]+[\.\-\_]?[0-9a-z]+[\.\-\_]?[0-9a-z]+@[a-z]{2,8}[\.\-]?.[a-z]{2,11}$/gim;
+    return console.log(regexp.test(email));
+}
+//emailFilter(email);
+
+/*10. Напишите ф-цию, которая из полного адреса с параметрами и без,
+например: https://tech.onliner.by/2018/04/26/smart-do-200/?
+utm_source=main_tile&utm_medium=smartdo200#zag3 , получит адрес
+доменного имени (https://tech.onliner.by), остальную часть адреса без
+параметров (/2018/04/26/smart-do-200/), параметры
+(utm_source=main_tile&utm_medium=smartdo200) и хеш (#zag3). В адресе
+может и не быть каких-либо составляющих. Ф-ция должна возвращать
+массив.*/
+
+let domenFilter = function(url){
+    let regExp = /^https:\/\/([a-z0-9.]+)(\/[^?&#\s]+\/?)?(\?[^?#\s]+)?(#[a-z0-9]+)?/;
+    return url.match(regExp);
+
+}
+console.log(domenFilter("https://learn.javascript.ru/regexp-greedy-and-lazy") );
