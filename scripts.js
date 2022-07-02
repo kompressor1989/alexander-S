@@ -117,3 +117,12 @@ let domenFilter = function(url){
 
 }
 //console.log(domenFilter("https://learn.javascript.ru/regexp-greedy-and-lazy") );
+
+const Contact = function(name, phone) {
+    if (name) this.name = name;
+    if (phone) this.phone = phone;
+    if (email) this.email = email;
+
+}
+
+let contact1 = new Contact ('Alex', 4353464575464, 'fggf@gmail.com');
